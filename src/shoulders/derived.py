@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: LGPL-3.0-or-later
+
 from .fundamental import (
     AMOUNT_OF_SUBSTANCE,
     DIMENSIONLESS,

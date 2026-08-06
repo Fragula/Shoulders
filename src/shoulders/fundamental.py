@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: LGPL-3.0-or-later
+
 from .dimension import Dimension
 
 TIME = Dimension((1, 0, 0, 0, 0, 0, 0))
@@ -8,5 +10,3 @@ THERMODYNAMIC_TEMPERATURE = Dimension((0, 0, 0, 0, 1, 0, 0))
 AMOUNT_OF_SUBSTANCE = Dimension((0, 0, 0, 0, 0, 1, 0))
 LUMINOUS_INTENSITY = Dimension((0, 0, 0, 0, 0, 0, 1))
 DIMENSIONLESS = Dimension((0, 0, 0, 0, 0, 0, 0))
-
-# Posteriormente usar packbits (NumPy)

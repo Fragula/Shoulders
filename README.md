@@ -14,7 +14,7 @@ The philosophy of the library is:
 
 > The first version focuses on dimensional analysis.
 
-```python
+```pythongit status
 from shoulders.fundamental import LENGTH, MASS, TIME
 
 # Dimension order:
