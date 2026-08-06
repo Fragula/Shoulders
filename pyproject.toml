@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shoulders"
+version = "0.1.0"
+description  = "Trying to make engineers' lives easier"
+authors = [
+    { name = "Fragula" }
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = { file = "LGPL-3.0-or-later" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
