@@ -1,6 +1,4 @@
-
-from shoulders.dimension import Dimension
-from shoulders.fundamental import (
+from shoulders.dimension.base import (
     AMOUNT_OF_SUBSTANCE,
     DIMENSIONLESS,
     ELECTRIC_CURRENT,
@@ -10,6 +8,7 @@ from shoulders.fundamental import (
     THERMODYNAMIC_TEMPERATURE,
     TIME,
 )
+from shoulders.dimension.dimension import Dimension
 
 # Dimension order:
 # (T, L, M, I, Θ, N, J)

@@ -1,5 +1,5 @@
-import shoulders.derived as dv
-from shoulders.fundamental import (
+import shoulders.dimension.derived as dv
+from shoulders.dimension.base import (
     AMOUNT_OF_SUBSTANCE,
     DIMENSIONLESS,
     ELECTRIC_CURRENT,
@@ -12,28 +12,28 @@ from shoulders.fundamental import (
 # Dimension order:
 # (T, L, M, I, Θ, N, J)
 
-def test_radian():
-    assert dv.RADIAN == DIMENSIONLESS
+def test_plane_angle():
+    assert dv.PLANE_ANGLE == DIMENSIONLESS
 
 
-def test_steradian():
-    assert dv.STERADIAN == DIMENSIONLESS
+def test_solid_angle():
+    assert dv.SOLID_ANGLE == DIMENSIONLESS
+
+
+def test_plane_angle_to_solid_angle():
+    assert dv.SOLID_ANGLE == dv.PLANE_ANGLE**2
 
 
 def test_frequency():
-    assert dv.FREQUENCY == TIME ** -1
-
-
-def test_accelaration():
-    assert dv.ACCELERATION == LENGTH / TIME ** 2
+    assert dv.FREQUENCY == TIME**-1
 
 
 def test_force():
-    assert dv.FORCE == MASS * dv.ACCELERATION
+    assert dv.FORCE == MASS * LENGTH / TIME**2
 
 
 def test_pressure():
-    assert dv.PRESSURE == dv.FORCE / dv.LENGTH ** 2
+    assert dv.PRESSURE == dv.FORCE / dv.LENGTH**2
 
 
 def test_stress():
@@ -89,28 +89,32 @@ def test_inductance():
 
 
 def test_magnetic_flux_density():
-    assert dv.MAGNETIC_FLUX_DENSITY == dv.MAGNETIC_FLUX / LENGTH ** 2
+    assert dv.MAGNETIC_FLUX_DENSITY == dv.MAGNETIC_FLUX / LENGTH**2
 
 
-def test_lumen():
-    assert dv.LUMEN == LUMINOUS_INTENSITY * dv.STERADIAN
+def test_luminous_flux():
+    assert dv.LUMINOUS_FLUX == LUMINOUS_INTENSITY * dv.SOLID_ANGLE
 
 
-def test_lux():
-    assert dv.LUX == dv.LUMEN / LENGTH ** 2
+def test_illuminance():
+    assert dv.ILLUMINANCE == dv.LUMINOUS_FLUX / LENGTH**2
 
 
-def test_becquerel():
-    assert dv.BECQUEREL == dv.FREQUENCY
+def test_radionuclide_activity():
+    assert dv.RADIONUCLIDE_ACTIVITY == dv.FREQUENCY
 
 
-def test_gray():
-    assert dv.GRAY == dv.ENERGY / MASS
+def test_aborbed_dose():
+    assert dv.ABSORBED_DOSE == dv.ENERGY / MASS
 
 
-def test_sievert():
-    assert dv.SIEVERT == dv.GRAY
+def test_kerma():
+    assert dv.KERMA == dv.ENERGY / MASS
 
 
-def test_katal():
-    assert dv.KATAL == AMOUNT_OF_SUBSTANCE / TIME
+def test_dose_equivalent():
+    assert dv.DOSE_EQUIVALENT == dv.ENERGY / MASS
+
+
+def test_catalytic_activity():
+    assert dv.CATALYTIC_ACTIVITY == AMOUNT_OF_SUBSTANCE / TIME

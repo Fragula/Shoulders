@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-from .fundamental import (
+from .base import (
     AMOUNT_OF_SUBSTANCE,
     ELECTRIC_CURRENT,
     LENGTH,
