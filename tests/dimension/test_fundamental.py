@@ -1,6 +1,6 @@
 from shoulders.dimension.base import (
     AMOUNT_OF_SUBSTANCE,
-    DIMENSIONLESS,
+    DIMENSION_ONE,
     ELECTRIC_CURRENT,
     LENGTH,
     LUMINOUS_INTENSITY,
@@ -13,11 +13,12 @@ from shoulders.dimension.dimension import Dimension
 # Dimension order:
 # (T, L, M, I, Θ, N, J)
 
+
 def test_time():
     assert TIME == Dimension((1, 0, 0, 0, 0, 0, 0))
 
 
-def test_length():    
+def test_length():
     assert LENGTH == Dimension((0, 1, 0, 0, 0, 0, 0))
 
 
@@ -41,5 +42,5 @@ def test_luminous_intensity():
     assert LUMINOUS_INTENSITY == Dimension((0, 0, 0, 0, 0, 0, 1))
 
 
-def test_dimensionless():
-    assert DIMENSIONLESS == Dimension((0, 0, 0, 0, 0, 0, 0))
+def test_DIMENSION_ONE():
+    assert DIMENSION_ONE == Dimension((0, 0, 0, 0, 0, 0, 0))

@@ -2,7 +2,7 @@
 
 from .base import (
     AMOUNT_OF_SUBSTANCE,
-    DIMENSIONLESS,
+    DIMENSION_ONE,
     ELECTRIC_CURRENT,
     LENGTH,
     LUMINOUS_INTENSITY,
@@ -13,7 +13,7 @@ from .base import (
 # === The 22¹ SI units with special name and symbols ===
 # ¹21 actually, Celsius temperature is missing because it has to be convert from kelvin
 
-PLANE_ANGLE = DIMENSIONLESS
+PLANE_ANGLE = DIMENSION_ONE
 SOLID_ANGLE = PLANE_ANGLE**2
 FREQUENCY = TIME**-1
 FORCE = MASS * LENGTH / TIME**2
@@ -37,7 +37,7 @@ ILLUMINANCE = LUMINOUS_FLUX / LENGTH**2
 RADIONUCLIDE_ACTIVITY = TIME**-1
 ABSORBED_DOSE = ENERGY / MASS
 KERMA = ENERGY / MASS  # equal to absorbed dose
-DOSE_EQUIVALENT = ENERGY / MASS  
+DOSE_EQUIVALENT = ENERGY / MASS
 CATALYTIC_ACTIVITY = AMOUNT_OF_SUBSTANCE / TIME
 
 # TODO: complete all the derived dimensions

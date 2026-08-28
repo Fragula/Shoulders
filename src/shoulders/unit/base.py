@@ -2,6 +2,7 @@
 
 from shoulders.dimension.base import (
     AMOUNT_OF_SUBSTANCE,
+    DIMENSION_ONE,
     ELECTRIC_CURRENT,
     LENGTH,
     LUMINOUS_INTENSITY,
@@ -12,10 +13,25 @@ from shoulders.dimension.base import (
 
 from .unit import Unit
 
-SECOND = Unit('second', 's', TIME)
-METRE = Unit('metre', 'm', LENGTH)
-KILOGRAM = Unit('kilogram', 'kg', MASS)
-AMPERE = Unit('ampere', 'A', ELECTRIC_CURRENT)
-KELVIN = Unit('kelvin', 'K', THERMODYNAMIC_TEMPERATURE)
-MOLE = Unit('mole', 'mol', AMOUNT_OF_SUBSTANCE)
-CANDELA = Unit('candela', 'cd', LUMINOUS_INTENSITY)
+SECOND = Unit('s', TIME, {'s': 1})
+s = SECOND
+
+METRE = Unit('m', LENGTH, {'m': 1})
+m = METRE
+
+KILOGRAM = Unit('kg', MASS, {'kg': 1})
+kg = KILOGRAM
+
+AMPERE = Unit('A', ELECTRIC_CURRENT, {'A': 1})
+A = AMPERE
+
+KELVIN = Unit('K', THERMODYNAMIC_TEMPERATURE, {'K': 1})
+K = KELVIN
+
+MOLE = Unit('mol', AMOUNT_OF_SUBSTANCE, {'mol': 1})
+mol = MOLE
+
+CANDELA = Unit('cd', LUMINOUS_INTENSITY, {'cd': 1})
+cd = CANDELA
+
+ONE = Unit("1", DIMENSION_ONE, {"1": 1})

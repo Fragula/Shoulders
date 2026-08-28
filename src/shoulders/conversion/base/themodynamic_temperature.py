@@ -1,0 +1,12 @@
+from shoulders.dimension.base import THERMODYNAMIC_TEMPERATURE
+from shoulders.unit.unit import Unit
+
+DEGREE_CELSIUS = Unit('℃', THERMODYNAMIC_TEMPERATURE, {'℃': 1})  # ℃: \u2103
+C = DEGREE_CELSIUS
+
+DEGREE_FAHRENHEIT = Unit('℉', THERMODYNAMIC_TEMPERATURE, {'℉': 1})  # ℉: \u2109
+F = DEGREE_FAHRENHEIT
+
+DEGREE_RANKINE = Unit('°R', THERMODYNAMIC_TEMPERATURE, {'°R': 1})  # °: \u00B0
+R = DEGREE_RANKINE
+Ra = DEGREE_RANKINE

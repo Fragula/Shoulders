@@ -13,6 +13,7 @@ from shoulders.dimension.dimension import Dimension
 # Dimension order:
 # (T, L, M, I, Θ, N, J)
 
+
 def test_t():
     assert sb.T == TIME
 
@@ -35,7 +36,7 @@ def test_theta():
 
 def test_n():
     assert sb.N == AMOUNT_OF_SUBSTANCE
-    
+
 
 def test_j():
     assert sb.J == LUMINOUS_INTENSITY
@@ -50,7 +51,7 @@ def test_div():
 
 
 def test_pow():
-    assert (sb.L / sb.T)**2 == Dimension((-2, 2, 0, 0, 0, 0, 0))
+    assert (sb.L / sb.T) ** 2 == Dimension((-2, 2, 0, 0, 0, 0, 0))
 
 
 def test_equivalence():

@@ -1,7 +1,7 @@
 import shoulders.dimension.derived as dv
 from shoulders.dimension.base import (
     AMOUNT_OF_SUBSTANCE,
-    DIMENSIONLESS,
+    DIMENSION_ONE,
     ELECTRIC_CURRENT,
     LENGTH,
     LUMINOUS_INTENSITY,
@@ -12,12 +12,13 @@ from shoulders.dimension.base import (
 # Dimension order:
 # (T, L, M, I, Θ, N, J)
 
+
 def test_plane_angle():
-    assert dv.PLANE_ANGLE == DIMENSIONLESS
+    assert dv.PLANE_ANGLE == DIMENSION_ONE
 
 
 def test_solid_angle():
-    assert dv.SOLID_ANGLE == DIMENSIONLESS
+    assert dv.SOLID_ANGLE == DIMENSION_ONE
 
 
 def test_plane_angle_to_solid_angle():
@@ -41,14 +42,14 @@ def test_stress():
 
 
 def test_energy():
-    assert dv.FORCE * LENGTH
+    assert dv.ENERGY == dv.FORCE * LENGTH
 
 
 def test_work():
     assert dv.WORK == dv.ENERGY
 
 
-def test_amout_of_heat():
+def test_amount_of_heat():
     assert dv.AMOUNT_OF_HEAT == dv.ENERGY
 
 
@@ -69,11 +70,15 @@ def test_electric_potential_difference():
 
 
 def test_electrical_resistance():
-    assert dv.ELECTRICAL_RESISTANCE == dv.ELECTRIC_POTENTIAL_DIFFERENCE / ELECTRIC_CURRENT
+    assert (
+        dv.ELECTRICAL_RESISTANCE == dv.ELECTRIC_POTENTIAL_DIFFERENCE / ELECTRIC_CURRENT
+    )
 
 
 def test_conductance():
-    assert dv.ELECTRICAL_CONDUCTANCE == ELECTRIC_CURRENT / dv.ELECTRIC_POTENTIAL_DIFFERENCE
+    assert (
+        dv.ELECTRICAL_CONDUCTANCE == ELECTRIC_CURRENT / dv.ELECTRIC_POTENTIAL_DIFFERENCE
+    )
 
 
 def test_capacitance():
