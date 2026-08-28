@@ -1,5 +1,7 @@
 # Shoulders
 
+# THE README IS KIND OUTDATED. IT ONLY BE UPDATED WHEN V0.2 COME OUT.
+
 > If I have seen further, it is by standing on the shoulders of giants.
 
 Shoulders is an open-source project focused on aiding engineers.
